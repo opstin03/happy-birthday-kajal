@@ -98,20 +98,21 @@
     </div>
 
     <script>
-        function checkAccess() {
+       function checkAccess() {
+            // .trim() removes any accidental spaces at the start or end
             var name = document.getElementById("nameInput").value.toLowerCase().trim();
             var dob = document.getElementById("dobInput").value.trim();
 
-            // --- EDIT THESE ---
-            var secretName = "Kajal_15"; 
-            var secretDOB = "04152005"; // Example: May 12th
+            // --- SETTINGS ---
+            var secretName = "kajal_15"; 
+            var secretDOB = "04152005"; 
             var canvaLink = "https://surprisefromstranger.my.canva.site/";
-            // ------------------
+            // ----------------
 
             if (name === secretName && dob === secretDOB) {
                 window.location.href = canvaLink;
             } else {
-                alert("Only the birthday girl can enter! Check your details. ");
+                alert("Only the birthday girl can enter! Check your details.");
             }
         }
     </script>
