@@ -193,6 +193,21 @@
             box-shadow: 0 10px 25px rgba(255, 31, 90, 0.4);
             transform: translateY(-2px);
         }
+
+/* Add this inside your <style> tags */
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem; /* Shrinks the text on mobile */
+        letter-spacing: 1px; /* Reduces spacing to save width */
+        margin-bottom: 20px;
+    }
+    
+    .login-card {
+        width: 85%; /* Makes the card fit better on mobile screens */
+        padding: 30px 20px;
+    }
+}
     </style>
 </head>
 <body>
@@ -211,10 +226,10 @@
     <div class="login-card">
         <h2>WELCOME KAMMO JI</h2>
         <div class="input-group">
-            <input type="text" id="nameInput" placeholder="Secret Name">
+            <input type="text" id="nameInput" placeholder="Username">
         </div>
         <div class="input-group">
-            <input type="password" id="dobInput" placeholder="DOB (MMDDYYYY)">
+            <input type="password" id="dobInput" placeholder="Password">
         </div>
         <button class="login-submit" onclick="checkAccess()">Login</button>
     </div>
